@@ -37,7 +37,7 @@ ctags:
 cscope:
 	@echo "Cleaning cscope* and recreate them ..."
 	@rm -rf cscope*
-	@find `pwd` -path `pwd`/.git -prune -o -not -regex '.*\.\(png\|gif\)' -type f -a -name "*.[ch]" -o -name "*.[ch]pp" -o -name "*.js" -o -name "*.html" -o -name "*.asp" >> cscope.files 
+	@find `pwd` -path .git -prune -o -not -regex '.*\.\(png\|gif\)' -type f -a -name "*.[ch]" -o -name "*.[ch]pp" -o -name "*.js" -o -name "*.html" -o -name "*.asp" >> cscope.files 
 	@cscope -Rbq -i cscope.files
 
 
@@ -50,7 +50,7 @@ cscope:
 
 	@ctags -R *.c *.h `pwd`
 
-	@find `pwd` -path `pwd`/.git -prune -o -not -regex '.*\.\(png\|gif\)' -type f -a -name "*.[ch]" -o -name "*.[ch]pp" -o -name "*.js" -o -name "*.html" -o -name "*.asp" >> cscope.files 
+	@find `pwd` -path .git -prune -o -not -regex '.*\.\(png\|gif\)' -type f -a -name "*.[ch]" -o -name "*.[ch]pp" -o -name "*.js" -o -name "*.html" -o -name "*.asp" >> cscope.files 
 	@cscope -Rbq -i cscope.files
 
 
