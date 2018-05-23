@@ -6,6 +6,16 @@ indent -bad -bap -bbb -bbo -nbc -bl -bli0 -bls -c33 -cd33 -ncdb -ncdw -nce -cli0
 
 
 
+indent命令参数：
+
+-bad -bap -bbb -bbo -nbc -bl -bli0 -bls -c33 -cd33 -ncdb -ncdw -nce -cli0 -cp33 -cs -d0 -nbfda -di2 -nfc1 -nfca -hnl -ip5 -l81 -lp -pcs -nprs -psl -saf -sai -saw -nsc -nsob -nss -i4 -ts4 -ut
+
+indent配置文件
+
+如上参数可写入用户目录下的文件：".indent.pro"，作为运行indent的确省参数。
+
+indent配置说明
+
 表 1. Indent代码格式化说明
 
 使用的indent参数	值	含义
@@ -46,3 +56,7 @@ indent -bad -bap -bbb -bbo -nbc -bl -bli0 -bls -c33 -cd33 -ncdb -ncdw -nce -cli0
 --space-special-semicolon	nss	一行的for或while语句，在";"前不加空。
 --tab-size	ts4	一个tab为4个空格（要能整除"-in"）
 --use-tabs	ut	使用tab来缩进
+常用：
+indent -npro -kr -bad -bap -bbb -bbo -nbc -bli0 -ncdb -cdw -ce -cli0 -cp2 -d0 -nbfda -di2 -i2 -ip5 -l120 -lp -pcs -nprs -npsl -saf -sai -saw -nsc -nsob -nss  -ts4 -ut *.cc *.h
+删除*~代码。
+注意格式化之前先备份。
